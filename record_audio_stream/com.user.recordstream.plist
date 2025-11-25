@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.recordstream</string>
+
+    <!-- Multiple daily run times -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>12</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>18</integer>
+            <key>Minute</key><integer>0</integer>
+        </dict>
+    </array>
+
+    <!-- Path to script -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/yourname/record_stream.sh</string>
+    </array>
+
+    <!-- Allow machine to wake -->
+    <key>WakeOnLaunch</key><true/>
+
+    <!-- Logging (launchd-level) -->
+    <key>StandardOutPath</key>
+    <string>/Users/yourname/recordings/logs/launchd_out.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/yourname/recordings/logs/launchd_err.log</string>
+</dict>
+</plist>
