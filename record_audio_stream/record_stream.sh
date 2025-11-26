@@ -23,14 +23,12 @@ RETENTION_DAYS=7
 CONNECT_TIMEOUT=8
 
 
-
 ################################
 # SETUP DIRECTORIES
 ################################
 
 mkdir -p "$OUTDIR"
 mkdir -p "$LOGDIR"
-
 
 
 ################################
@@ -48,7 +46,6 @@ fi
 echo "$(date): Stream reachable. Starting recording." >> "$LOGDIR/record.log"
 
 
-
 ################################
 # OUTPUT FILENAME
 ################################
@@ -56,12 +53,14 @@ echo "$(date): Stream reachable. Starting recording." >> "$LOGDIR/record.log"
 OUTPUT_FILE="$OUTDIR/record_$(date +%Y%m%d_%H%M%S).mp4"
 
 
-
 ################################
 # RUN RECORDING (PREVENT SLEEP)
 ################################
 
-caffeinate -s ffmpeg \
+# Use 'caffeinate' to prevent system sleep during recording
+# Note: Adjust the path to 'ffmpeg' if necessary
+
+caffeinate -s /usr/local/bin/ffmpeg \
   -i "$STREAM_URL" \
   -t "$DURATION" \
   -c copy -bsf:a aac_adtstoasc \
@@ -69,7 +68,6 @@ caffeinate -s ffmpeg \
   >> "$LOGDIR/ffmpeg.log" 2>&1
 
 echo "$(date): Recording completed → $OUTPUT_FILE" >> "$LOGDIR/record.log"
-
 
 
 ################################
