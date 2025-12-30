@@ -1,0 +1,558 @@
+{
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_25c1e8ef-ad47-426a-b7c6-5191a4032610",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 233
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 234
+            },
+            "text": "I used launchd on my macbook running macOS Sonoma 14.7 to invoke this script. As soon it runs the 'curl' statement, it failed due to the stream isunavailable. How to wait until internet connection before running the 'curl' statement?",
+            "kind": "text"
+          }
+        ],
+        "text": "I used launchd on my macbook running macOS Sonoma 14.7 to invoke this script. As soon it runs the 'curl' statement, it failed due to the stream isunavailable. How to wait until internet connection before running the 'curl' statement?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+              "external": "file:///Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+              "path": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+              "scheme": "file"
+            },
+            "id": "file:///Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "name": "record_stream.sh"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "mcpServersStarting",
+          "didStartServerIds": []
+        },
+        {
+          "kind": "thinking",
+          "value": "**Modifying script for network wait**\n\nThe user asks how to modify a script to wait for an internet connection before running a curl command. I should begin by using the manage_todo_list tool, creating a todo list to outline the necessary modifications. It's important to provide a brief preamble before the tool calls, like \"I'll add a network-wait loop and update TODOs.\" After that, I'll apply the patch to update the script. I'll list steps in the todo: add the network wait loop, update the script, and apply changes.",
+          "id": "TarIcxG2ELCfj/udyBV/ZQ9DlrB42H/OuFDmLKRVcDFjqF3zx2pPm/Yz76RTr0e/0xhVS3USKJlUDCxIQbRd1YaZE30HJ6bnVwbUVqy0qt+VwcVrIZ7aaqdMV9zLL6T672ADpfv5LFuiFWNSzYIVUr3u3XDPfVlgK+HkeLc7mptYMdnDD8SJk7YkljzLo3w33WdwaIk59PA2iARAMleyTgkPeHe7al45uq3t5THadfi1dRbKVZJQgvJZwQx1snDxzk9ga1uwLGd5Yx8xylAtrDiDxWFMpPMEoTsLMq+JrQHAa8+k4F1zbpUOBOaiZ0b43L199UX30xqyv6UEZjC5e/p3Gr/e/08BRlTejgL9Q3aLEXHGJGDxb+a/6/RS+QirFleLiNwPvNsd7rmrfhgwZVX4QIB5/Yw="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "N+NG1C6OQ8ApHQzpGooiiJj6hVlCLUlstZUx+MBUMl/SD4Ji+h4eOVSanYiEGWJ/4vro28/0dTENc93HlyhFXJNP4w90PJpOu5OCtIUEwE07jJO0ZB+Anrd67zptaVJDoCODx2XFAgp8v+g9+pd1hvVh5ioxkASfc22wpZcgPYaUswdGMzOYlauppjGT00jxCiSeRDYPUUdzYVMs4EFkR+6xSHjya/lt5RDs3UaG0JIKqxyeGkk+/C+NNgX+8XiYkwR5pgz3ugmTSzABBEbCBWC5jKOKqlqMhwacajLvjIjFUQOwRe1AYRoWfFibSHUrbkSzkUJ5BwqJ1FY+tpaeHl6BBzqq2Em+5nv2cftoVVelLED45U9s7OqLaNNoS9I/FAlvZz+9sFqFX0ZZ9IOFmcjOl/beJR0="
+        },
+        {
+          "kind": "thinking",
+          "value": "**Updating todo list and applying patch**\n\nI'm preparing to call manage_todo_list to mark tasks as completed, which requires a full list with statuses. The initial status is not-started. After that, I'll apply the patch to update the script. So, I'll call manage_todo_list twice: once with the not-started tasks and again to mark them as completed after the patch. The patch needs to modify the CONNECTIVITY CHECK section of the script to ensure it waits for network connectivity before running curl, possibly using ping or nc -z for checking connectivity.",
+          "id": "0ATVgfisyJ7e1GUDAQzQq1ifbzYTjrk+kFIRuMK9sRc7nhTzw9JiiWJLe2QyHFrOF2vDryvdIBrzI38/O5si0V5jTPTzkpnsi+4l/X/eblj+Osve1DCtDyN1jdg969JR7WbWJLOntR5u77RBk44m1sRr6sHQDAw/UxSU1MicW+RM32HN3pj5yFNq9j+KRAF2KOE8Xhrpeh3XYQUDVU6Wdknzn2W9nJe6XKVTKkQIIARcaUEeq8g2watmdUUSVtmsRAx6cSqaAolL9w4aPuXAGLg1FgmKgNFbn9wVpGKWFRFcZdQ+rqik9nrc1yfTchSBCNOXNsAVGcVfYPzLk/MkbfW+2gnXuViCg3fJgVKowv7BQrE4upuSzHwFVXre1Hjcea/f/+rzO3ACxfRU0f4gquSyJB51BXI="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "bc4ZizlBIabQo8/Oh1mM1GS+mrNyspnaMHtxWyDhsBQi0Vf3ee9ul780L9KopE10nh5UfonWaBag+/U/QWqNMu9iVL6efU08qxOQVpo9mJl0eKdIDBeJ58/c+PKKucdxx1nFWwX7BuaOfzkUaLC5q7Xu9JiaWgKMaicyQpS/ixsyhWBrydO9HHy2Illc8qaicAURwNMxOOhVQd2KYyhoKiFqffYU1L6JvXQDlk+VkINjC1OERBM2Il1s0wzt6iYwxZpHYqeupGsy5gHKj68WtUWF7h3KmnNDvGThyMTgH7G77pc4toC3BRDunobPNiy8d1uQYmnTzWKxg0Pmsn9raUd/6+92XhOigr0fPdQgazPNh7r79gSy/W8wgEO6BD4wS5dXNcu9D6QsY8U5uNlVT4rEI/MWJGs="
+        },
+        {
+          "kind": "thinking",
+          "value": "**Implementing network wait before curl**\n\nTo ensure proper connectivity before running the curl command, I think the best approach is to loop while trying to ping a reliable IP like 1.1.1.1. If the script is launched by launchd, the network may not be ready yet. I’ll implement a wait loop that will keep checking for internet access by using `ping` or `curl` with a timeout and maximum retries. This way, I can log attempts and proceed to curl the STREAM_URL only after confirming the network is available.",
+          "id": "E3lOE4CNc5twMI6rIYr1Px8pf30vhHU61D9o4j72TdXvLCBxWNxDcb90H00C2NUeSiP6xXUlHXMaZMwAvpyz68aQqYW6CPu5Kk+Rjl5TkE0+8ZgTJUFctzgL6DS+x7Ho61fBDka7CPasTYzdZe6Dy1YAzCQ4cr1MfEe0NlDCStH8iMbU4e++2eIsiUoJkJn+o9dFVe9cKU2cRuZNmCpOEunFsGBhCL6R+06PprwKwrkutPfxcZxcoKkpkwDdoF+W0frhbz0ijeykrcQr+f+usmip246KchBLQCVi30orYVmWc46Tk86R1TYqYGFKk5cf8+eXqLmmV3XiNmAmY7gwniB6w8Jan3DwpPSbmJZNTbhJDIvUBehV3DAvwphxJKZPj4qdPGSyitU2flVnKEf3kSSxSEzh1cc="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "fxwNTcA/WmiS0UJrw2dDQaGofWmdH+DDB7mH8kXyMibZEpD8oZD24Jv82o40mtsDbMlhA+aAo8VBv2jqTMVinDXO2v75WBGDPrq5MMHV2HHE3VZ6nKkODIqKJratgW3hly+fGy2P+uvSu6GbZGAuavKu08PUL3UBc2dE44h3gkblKTkihIUYdxmO0lnuXyMqrnyXuvtdp6rFrpQBHthcpxqCH6dU8BjLOrfj/LlPFu0FJ1AOAqA9gEoJHqr3R6RC6pxIj03Tzg5UlqVz4nm/3KfuO3afjamAqZ07DAoMQtXhiqAIQ4ITenKvObrNjZ+GaEUrbe9qYjklLBnrK7TUa6crPKzq8KdltGFoGblKcV+AEoE/S3jbo1HaZIXzla5C5DeQTlBPLixjbDe+e2oYikmhn6fBeLM="
+        },
+        {
+          "kind": "thinking",
+          "value": "**Updating script for network and curl**\n\nI believe it’s a better approach to keep trying curl on the STREAM_URL until it's available or I reach a total timeout. Since the user wants to wait for internet connection before running curl, I'll establish connectivity by pinging a reliable host like 1.1.1.1 first, setting WAIT_TIMEOUT to 60 seconds with a 5-second interval.\n\nThen, I’ll proceed with the curl command. I'll make minimal changes to the script, ensuring it follows the apply_patch format with the correct relative path, and provide context for the update. After applying the patch, I’ll mark the todo list as completed.",
+          "id": "QxxjqE4svANWlO0Wnt+gcFVSnXDL25qWN55Z04K3fLRmOAS7ZHynH8BKB04ml2MemTf7bDGYdArV1yDZ9q98YybzZXL860M4+5lJLrFsFrSclmliwee/4D3m+pkfYUfyz8ugG8oZXVwd40QbAUgNIGIbpBKpeP6LJJSWvqbsLgRMAAwySfpimlUeOHRmslCOgLa7g0rKrDHmnmHU3+Us5vaX5BEexjEH0+5M7/s2J1HPJuUf3xkoepNxzyhY5fU/vY0yREZtJZgV3XigYG2jchdyREWc57ySBKDfOASfQx04IIMuW8fv5kp7X+bG/Addki+fZAK9QFam4z3EQhADGrf5ptwu8Wb4WTYy+d4Ztp4uPS2+pF1tetUYQ9GyW+7BQGQnj9QfUX98OUdo5Nj+v1hZhLuJi8g="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "9u6T5dwhjptQf+g62wtF/CPDvHk6fa7zZCcwCz/8lbKSwsKYys0sjbS4+fxGbjUxdHYBmbssax2h6UbmjcOn4gVsuPMPjySRvub2750T83/zTHbTBDJVopf6V67ZrL0webvby0UwvwmG54OpB0vDRObzWrDJbz9tqG9UUAHHYwN/W5HZ5kTvBX7/7moiKvzOVylg7j8jvdb9mJIX2MaPNftEhlUlVOpLS85lBFI/RqBnYjKgsgaAIOljIjD8vCTHa2tuwi3xEpE1uH9o5HkOH2lgeBh4koFxKP44JZMedT0UWYNUwOxcdhSIe0AEi4DQrnCXxZl2GT//De749MOICeh8c/M51jkJ+D6XGh/Z2Fvo5ryhUbR/Muh/en9RdyrHZ8MSLh+A0x9MH87Kf6Q1bvuJNqc66+8="
+        },
+        {
+          "kind": "thinking",
+          "value": "**Planning patch and updates**\n\nI'll start by creating a short TODO plan for the changes needed. I need to send a preamble before the first manage_todo_list call. Then, before applying the patch, I'll inform the user that I'm adding a network-wait loop and updating the connectivity check.\n\nAfter applying the patch, I'll provide a progress update following the tool calls. The update will summarize what's next. I want to replace the connectivity section in the script with new code that includes the variables for waiting and checking connectivity via curl to a reliable host. I'll also ensure to format file links correctly.",
+          "id": "SsNkLHExyHu1m2S3kCR2sgHAcElsSQRHVHUJn1/yKCebQz0Yn0tkPlBcy7cDpvcLkPzRFNRHi8c72Ab30Z1sE1Nfz2NgVDiSsMtw6z0ain06ZPN36I6F3tkPVk0Tezgug6DAy1n0o23M9QernNUk0vZ/sayjiMFiVW6dnnnuMU4yySLEuC/OPsuL0UGhGD7MCFsAiB8qpM1N1Xj1z7G/BAQuL0l5W5jjOpOBSB6Wqx7tbJ/2OnXoVFInRMjgGZvr/dmV3IOAPzrAA6U9TzJmitD+ZcFhTlabHyO+JMxhYtZSaoJoNDjJm7Bzflv3zjp6BrXwaSBcrFDiVUqAodgYy66/tqNWvr9m36OM3W7rV3rIHNmR/oXkGYRI1kyaSZfZS77MwrrmAd+bGw/SCtN9C3Ifq4rDFq4=",
+          "generatedTitle": "Modified script and implemented network wait"
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "/NppY7KVxkSSU2teB40RGrNHi55zv5kkrvVirtYNzfKkCDJ+AR6x/a+xuP7c10IG0H5ZKjb5kBbQDWoVMXqRf/1yHcFy4hEgtjyDIjLqOH5VNXnXlDnXIzli2MYZsOTpcKHSbdiVdG5QPx1Ks+E5Lu5FDYIppWehMtER3qx8aCvEw/6/YNjQLrHWnTc4DvNw5qkRnAsb05BVDgdVeCB8EpHBzmJMTEQXOK6Yt13tqfIZ3lx6GqdSdatXWWbfgRYjzGZhonAuxOWdUiAa6QLFQEVPS4Lr9jNeRJ1XLEls7sQozQSiuOqZ9GXCS+/NDT59rQVcD4ucvL3W6207KTtNUWL3JwY17zFKQc/hTchqKhm0N8zZ4yF4UurhevEtNGgdya2/U0yTVuhEycmB/+Z1c94RHUzoBZY="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "",
+          "metadata": {
+            "vscodeReasoningDone": true,
+            "stopReason": "text"
+          }
+        },
+        {
+          "value": "I'll create a short TODO plan, then add a network-wait loop to the script and mark the TODO done.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/abusyahmie/code/Bash_Scripting/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "prepareToolInvocation",
+          "toolName": "manage_todo_list"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": "Using \"Manage and track todo items for task planning\"",
+          "pastTenseMessage": {
+            "value": "Created 2 todos",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "todoList",
+            "sessionId": "fa23c5de-2b1c-4586-8f05-005a6955615e",
+            "todoList": [
+              {
+                "id": "1",
+                "title": "Add network-wait loop",
+                "description": "Modify `record_stream.sh` to wait for general internet connectivity before attempting `curl` to the stream, with configurable timeout and interval.",
+                "status": "in-progress"
+              },
+              {
+                "id": "2",
+                "title": "Update script and tests",
+                "description": "Apply changes to `record_stream.sh`, run a quick static check, and verify logs are written.",
+                "status": "not-started"
+              }
+            ]
+          },
+          "toolCallId": "f2053236-cba4-4fdb-93ec-92d90c08c5cd",
+          "toolId": "manage_todo_list"
+        },
+        {
+          "value": "Now I'll add a network-wait loop and update the connectivity check in the script.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/abusyahmie/code/Bash_Scripting/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "prepareToolInvocation",
+          "toolName": "copilot_applyPatch"
+        },
+        {
+          "kind": "prepareToolInvocation",
+          "toolName": "copilot_applyPatch"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "presentation": "hidden",
+          "invocationMessage": "Using \"Apply Patch\"",
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolCallId": "9ce0994f-deb3-4d69-a609-495eaa3b17c9",
+          "toolId": "copilot_applyPatch"
+        },
+        {
+          "value": "\n```\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "supportAlertSyntax": false,
+          "uris": {}
+        },
+        {
+          "id": "07afac4b-8c10-4377-bb79-5fa085d5b83c",
+          "kind": "undoStop"
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "external": "file:///Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "path": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "scheme": "file"
+          },
+          "isEdit": true
+        },
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "external": "file:///Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "path": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "#!/bin/bash\n\n################################\n# CONFIGURATION\n################################\n\n# HLS audio stream URL\nSTREAM_URL=\"https://ais-sa8.cdnstream1.com/5035/playlist.m3u8?aw_0_1st.playerid=IKIMFMAudioWeb\"\n\n# Duration of each recording (seconds)\nDURATION=900   # 15 minutes\n\n# Output directory for recordings\nOUTDIR=\"$HOME/recordings\"\n\n# Log directory\nLOGDIR=\"$HOME/recordings/logs\"\n\n# Delete recordings older than N days\nRETENTION_DAYS=7\n\n# Timeout for connectivity test (seconds)\nCONNECT_TIMEOUT=8\n\n\n################################\n# SETUP DIRECTORIES\n################################\n\nmkdir -p \"$OUTDIR\"\nmkdir -p \"$LOGDIR\"\n\n\n################################\n# CONNECTIVITY CHECK\n################################\n\necho \"$(date): Checking network availability...\" >> \"$LOGDIR/record.log\"\n\n# Wait for general internet connectivity before probing the stream.\n# Configure these values if you need a longer wait or shorter retry interval.\nNETWORK_WAIT_MAX=60       # total seconds to wait for internet\nNETWORK_WAIT_INTERVAL=5   # seconds between checks\nNETWORK_TEST_URL=\"https://www.apple.com\"\n\nelapsed=0\necho \"$(date): Waiting for network connectivity (max ${NETWORK_WAIT_MAX}s)...\" >> \"$LOGDIR/record.log\"\nwhile ! curl --silent --head --fail --max-time 5 \"$NETWORK_TEST_URL\" > /dev/null 2>&1; do\n  if [ \"$elapsed\" -ge \"$NETWORK_WAIT_MAX\" ]; then\n    echo \"$(date): Network unavailable after ${NETWORK_WAIT_MAX}s. Exiting.\" >> \"$LOGDIR/record.log\"\n    exit 1\n  fi\n  sleep \"$NETWORK_WAIT_INTERVAL\"\n  elapsed=$((elapsed + NETWORK_WAIT_INTERVAL))\ndone\n\necho \"$(date): Network reachable. Checking stream availability...\" >> \"$LOGDIR/record.log\"\n\ncurl --silent --fail --max-time \"$CONNECT_TIMEOUT\" \"$STREAM_URL\" > /dev/null\nif [ $? -ne 0 ]; then\n  echo \"$(date): Stream unavailable. Skipping recording.\" >> \"$LOGDIR/record.log\"\n  exit 1\nfi\n\necho \"$(date): Stream reachable. Starting recording.\" >> \"$LOGDIR/record.log\"\n\n\n################################\n# OUTPUT FILENAME\n################################\n\nOUTPUT_FILE=\"$OUTDIR/record_$(date +%Y%m%d_%H%M%S).mp4\"\n\n\n################################\n# RUN RECORDING (PREVENT SLEEP)\n################################\n\n# Use 'caffeinate' to prevent system sleep during recording\n# Note: Adjust the path to 'ffmpeg' if necessary\n\ncaffeinate -s /usr/local/bin/ffmpeg \\\n  -i \"$STREAM_URL\" \\\n  -t \"$DURATION\" \\\n  -c copy -bsf:a aac_adtstoasc \\\n  -f mp4 \"$OUTPUT_FILE\" \\\n  >> \"$LOGDIR/ffmpeg.log\" 2>&1\n\necho \"$(date): Recording completed → $OUTPUT_FILE\" >> \"$LOGDIR/record.log\"\n\n\n################################\n# RETENTION POLICY (DELETE OLD FILES)\n################################\n\nfind \"$OUTDIR\" -name \"*.mp4\" -type f -mtime +\"$RETENTION_DAYS\" -print -delete \\\n  >> \"$LOGDIR/cleanup.log\" 2>&1\n\necho \"$(date): Cleanup done.\" >> \"$LOGDIR/record.log\"\n",
+                "range": {
+                  "startLineNumber": 1,
+                  "startColumn": 1,
+                  "endLineNumber": 101,
+                  "endColumn": 1
+                }
+              }
+            ],
+            []
+          ],
+          "done": true
+        },
+        {
+          "value": "\n```\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "supportAlertSyntax": false,
+          "uris": {}
+        },
+        {
+          "kind": "prepareToolInvocation",
+          "toolName": "manage_todo_list"
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": "Using \"Manage and track todo items for task planning\"",
+          "pastTenseMessage": {
+            "value": "Starting: *Update script and tests* (2/2)",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "todoList",
+            "sessionId": "fa23c5de-2b1c-4586-8f05-005a6955615e",
+            "todoList": [
+              {
+                "id": "1",
+                "title": "Add network-wait loop",
+                "description": "Modify `record_stream.sh` to wait for general internet connectivity before attempting `curl` to the stream, with configurable timeout and interval.",
+                "status": "completed"
+              },
+              {
+                "id": "2",
+                "title": "Update script and tests",
+                "description": "Apply changes to `record_stream.sh`, run a quick static check, and verify logs are written.",
+                "status": "in-progress"
+              }
+            ]
+          },
+          "toolCallId": "a882c28b-e73f-4c41-be62-737cfa93d35b",
+          "toolId": "manage_todo_list"
+        },
+        {
+          "value": "Progress update: I added a network-wait loop to the connectivity check in the script.\n\nWhat I changed\n- **File:** ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/abusyahmie/code/Bash_Scripting/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "name": "record_audio_stream/record_stream.sh",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "external": "file:///Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "path": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "\n- **Change:** Added a loop that waits for general internet connectivity (by curling https://www.apple.com) up to a configurable timeout before attempting the stream `curl` check.\n\nKey behavior\n- New variables: `NETWORK_WAIT_MAX` (seconds), `NETWORK_WAIT_INTERVAL` (seconds), `NETWORK_TEST_URL`.\n- The script waits until it can reach `NETWORK_TEST_URL` (5s curl timeout per check) or exits after the max wait, then performs the original `curl` probe of the HLS stream.\n\nHow to adjust or test\n- Edit `NETWORK_WAIT_MAX` and `NETWORK_WAIT_INTERVAL` near the top of the connectivity section to change wait behavior.\n- Run the script manually to test:\n```bash\ncd record_audio_stream\n./record_stream.sh\n```\n- Logs: check $HOME/recordings/logs/record.log and ffmpeg.log for progress and errors.\n\nNext steps\n- If you want, I can:\n  - Increase robustness (exponential backoff, DNS-only check, or use a different test URL).\n  - Add a launchd-compatible plist that sets NetworkState conditions.\n  - Run the script under your launchd setup to validate behavior.\n\nWould you like me to implement any of those next?",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/abusyahmie/code/Bash_Scripting/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.35.2",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.editsAgent",
+        "description": "Edit files in your workspace in agent mode",
+        "when": "config.chat.agent.enabled",
+        "metadata": {
+          "themeIcon": {
+            "id": "tools"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "agent",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "slashCommands": [
+          {
+            "name": "list"
+          }
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1767060212224,
+      "modelId": "copilot/auto",
+      "responseId": "response_90f4f525-0f03-4ac4-91a4-d531dce915ad",
+      "result": {
+        "timings": {
+          "firstProgress": 32243,
+          "totalElapsed": 62182
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "cd record_audio_stream\n./record_stream.sh\n",
+              "language": "bash",
+              "markdownBeforeBlock": "Progress update: I added a network-wait loop to the connectivity check in the script.\n\nWhat I changed\n- **File:** \n- **Change:** Added a loop that waits for general internet connectivity (by curling https://www.apple.com) up to a configurable timeout before attempting the stream `curl` check.\n\nKey behavior\n- New variables: `NETWORK_WAIT_MAX` (seconds), `NETWORK_WAIT_INTERVAL` (seconds), `NETWORK_TEST_URL`.\n- The script waits until it can reach `NETWORK_TEST_URL` (5s curl timeout per check) or exits after the max wait, then performs the original `curl` probe of the HLS stream.\n\nHow to adjust or test\n- Edit `NETWORK_WAIT_MAX` and `NETWORK_WAIT_INTERVAL` near the top of the connectivity section to change wait behavior.\n- Run the script manually to test:\n"
+            }
+          ],
+          "renderedUserMessage": [
+            {
+              "type": 1,
+              "text": "<attachments>\n<attachment id=\"record_stream.sh\" filePath=\"/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh\">\n#!/bin/bash\n\n################################\n# CONFIGURATION\n################################\n\n# HLS audio stream URL\nSTREAM_URL=\"https://ais-sa8.cdnstream1.com/5035/playlist.m3u8?aw_0_1st.playerid=IKIMFMAudioWeb\"\n\n# Duration of each recording (seconds)\nDURATION=900   # 15 minutes\n\n# Output directory for recordings\nOUTDIR=\"$HOME/recordings\"\n\n# Log directory\nLOGDIR=\"$HOME/recordings/logs\"\n\n# Delete recordings older than N days\nRETENTION_DAYS=7\n\n# Timeout for connectivity test (seconds)\nCONNECT_TIMEOUT=8\n\n\n################################\n# SETUP DIRECTORIES\n################################\n\nmkdir -p \"$OUTDIR\"\nmkdir -p \"$LOGDIR\"\n\n\n################################\n# CONNECTIVITY CHECK\n################################\n\necho \"$(date): Checking stream availability...\" >> \"$LOGDIR/record.log\"\n\ncurl --silent --fail --max-time \"$CONNECT_TIMEOUT\" \"$STREAM_URL\" > /dev/null\nif [ $? -ne 0 ]; then\n    echo \"$(date): Stream unavailable. Skipping recording.\" >> \"$LOGDIR/record.log\"\n    exit 1\nfi\n\necho \"$(date): Stream reachable. Starting recording.\" >> \"$LOGDIR/record.log\"\n\n\n################################\n# OUTPUT FILENAME\n################################\n\nOUTPUT_FILE=\"$OUTDIR/record_$(date +%Y%m%d_%H%M%S).mp4\"\n\n\n################################\n# RUN RECORDING (PREVENT SLEEP)\n################################\n\n# Use 'caffeinate' to prevent system sleep during recording\n# Note: Adjust the path to 'ffmpeg' if necessary\n\ncaffeinate -s /usr/local/bin/ffmpeg \\\n  -i \"$STREAM_URL\" \\\n  -t \"$DURATION\" \\\n  -c copy -bsf:a aac_adtstoasc \\\n  -f mp4 \"$OUTPUT_FILE\" \\\n  >> \"$LOGDIR/ffmpeg.log\" 2>&1\n\necho \"$(date): Recording completed → $OUTPUT_FILE\" >> \"$LOGDIR/record.log\"\n\n\n################################\n# RETENTION POLICY (DELETE OLD FILES)\n################################\n\nfind \"$OUTDIR\" -name \"*.mp4\" -type f -mtime +\"$RETENTION_DAYS\" -print -delete \\\n  >> \"$LOGDIR/cleanup.log\" 2>&1\n\necho \"$(date): Cleanup done.\" >> \"$LOGDIR/record.log\"\n</attachment>\n\n</attachments>\n<context>\nThe current date is 30 December 2025.\nTerminals:\nTerminal: zsh\nTerminal: zsh\n<todoList>\nError: todoList is required for write operation\n</todoList>\n\n</context>\n<editorContext>\nThe user's current file is /Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh. \n</editorContext>\n<reminderInstructions>\nYou are an agent—keep going until the user's query is completely resolved before ending your turn. ONLY stop if solved or genuinely blocked.\nTake action when possible; the user expects you to do useful work without unnecessary questions.\nAfter any parallel, read-only context gathering, give a concise progress update and what's next.\nAvoid repetition across turns: don't restate unchanged plans or sections (like the todo list) verbatim; provide delta updates or only the parts that changed.\nTool batches: You MUST preface each batch with a one-sentence why/what/outcome preamble.\nProgress cadence: After 3 to 5 tool calls, or when you create/edit > ~3 files in a burst, report progress.\nRequirements coverage: Read the user's ask in full and think carefully. Do not omit a requirement. If something cannot be done with available tools, note why briefly and propose a viable alternative.\nSkip filler acknowledgements like \"Sounds good\" or \"Okay, I will…\". Open with a purposeful one-liner about what you're doing next.\nWhen sharing setup or run steps, present terminal commands in fenced code blocks with the correct language tag. Keep commands copyable and on separate lines.\nAvoid definitive claims about the build or runtime setup unless verified from the provided context (or quick tool checks). If uncertain, state what's known from attachments and proceed with minimal steps you can adapt later.\nWhen you create or edit runnable code, run a test yourself to confirm it works; then share optional fenced commands for more advanced runs.\nFor non-trivial code generation, produce a complete, runnable solution: necessary source files, a tiny runner or test/benchmark harness, a minimal `README.md`, and updated dependency manifests (e.g., `package.json`, `requirements.txt`, `pyproject.toml`). Offer quick \"try it\" commands and optional platform-specific speed-ups when relevant.\nYour goal is to act like a pair programmer: be friendly and helpful. If you can do more, do more. Be proactive with your solutions, think about what the user needs and what they want, and implement it proactively.\n<importantReminders>\nDo NOT volunteer your model name unless the user explicitly asks you about it. \nYou MUST use the todo list tool to plan and track your progress. NEVER skip this step, and START with this step whenever the task is multi-step. This is essential for maintaining visibility and proper execution of large tasks.\nWhen referring to a filename or symbol in the user's workspace, wrap it in backticks.\n\n</importantReminders>\n\n</reminderInstructions>\n<userRequest>\nI used launchd on my macbook running macOS Sonoma 14.7 to invoke this script. As soon it runs the 'curl' statement, it failed due to the stream isunavailable. How to wait until internet connection before running the 'curl' statement? (See <attachments> above for file contents. You may not need to search or read the file again.)\n</userRequest>\n"
+            },
+            {
+              "type": 3,
+              "cacheType": "ephemeral"
+            }
+          ],
+          "renderedGlobalContext": [
+            {
+              "type": 1,
+              "text": "<environment_info>\nThe user's current OS is: macOS\n</environment_info>\n<workspace_info>\nI am working in a workspace with the following folders:\n- /Users/abusyahmie/code/Bash_Scripting \nI am working in a workspace that has the following structure:\n```\nBash_Scripting.code-workspace\nREADME.md\nrecord_audio_stream/\n\tcom.user.recordstream.plist\n\tREADME.md\n\trecord_stream.sh\n```\nThis is the state of the context at this point in the conversation. The view of the workspace structure may be truncated. You can use tools to collect more context if needed.\n</workspace_info>\n"
+            },
+            {
+              "type": 3,
+              "cacheType": "ephemeral"
+            }
+          ],
+          "cacheKey": "file:///Users/abusyahmie/code/Bash_Scripting",
+          "toolCallRounds": [
+            {
+              "response": "I'll create a short TODO plan, then add a network-wait loop to the script and mark the TODO done.",
+              "toolCalls": [
+                {
+                  "id": "call_ECeIkD6B9dMoLF07jqNZVZeO__vscode-1767059739548",
+                  "name": "manage_todo_list",
+                  "arguments": "{\"todoList\":[{\"id\":1,\"title\":\"Add network-wait loop\",\"description\":\"Modify `record_stream.sh` to wait for general internet connectivity before attempting `curl` to the stream, with configurable timeout and interval.\",\"status\":\"in-progress\"},{\"id\":2,\"title\":\"Update script and tests\",\"description\":\"Apply changes to `record_stream.sh`, run a quick static check, and verify logs are written.\",\"status\":\"not-started\"}]}"
+                }
+              ],
+              "toolInputRetry": 0,
+              "id": "4aad2da1-6c93-48a0-94ef-0262515a7819",
+              "statefulMarker": "li3D4skeRR4BMsppHe6SgLjOkPXwD8LJDfXeTFTvYaq1md9VXsgu1LCfnT+P4nH3cvnZdNq+M9vU9T6hqtYPX0PT9k5L6I4dRyyXBghhzPNVF6Da9//z+XyLBfjiK580SBSwZETAflOl/J9E1leKuQ7dZV/0+5MuzgyOFNXdm/bQBseQkXxlhP0ury3TD1v/PzDUtLi9EfGiZxPyFphqAb6ktvE1MmiMilQcG2l24fWEVaDg9//HYxLWFdX2rM2+qnjnyfNbl2eiNBQGHd+xkF02bCMqqSH0OfICHo2GtGvy9RtvKmj9zlylDH9WAzfPZjN75ty6Iwx3MrqavGSH6boSeJ8sfDZcTiyqFyf2skv6SvgzzeDSgICzut/545ACOxmNSMJ4THf9vqePrF6EiVUMJ2Xhtvb5Iw==",
+              "thinking": {
+                "id": "9dUmHMKmGNi0nQtK8Bu9AyWiLD/pJz6qmnjicKfpTyttdvoZUuis014OBPke0bnjaE/1BU+pIG7wUuE7+QspuROHMi4q+msIjs1B3lI+lVmx0bKTIxXTc3L96/l0LJWV7WQ1G+CZjTwOUvXpt5oTC19QQBzhZ5hNO92vzBmKRIE49vnKsH1eQn+P1vCiGKOMaofOsd5lzx5plxrlcPU4kdKFWc4QkYLTWCYefr//Q1XnzvUlLwtTKFIthEXbqgHrpttNbG6NCca7T+9UIOV/bzoyq8bqfI9nyF26xU97jWAQqCwrc6Id4u3ZloMVsqIXP1GjCmu4Nw22eI0f98QjG7+eo5gJUYvYYr8gZ0B0mfruqql73VP0AbS86gWKlV07BWH4nVNueuACl+U/tmAlAlfMXM5ihc8=",
+                "text": "**Modifying script for network wait**\n\nThe user asks how to modify a script to wait for an internet connection before running a curl command. I should begin by using the manage_todo_list tool, creating a todo list to outline the necessary modifications. It's important to provide a brief preamble before the tool calls, like \"I'll add a network-wait loop and update TODOs.\" After that, I'll apply the patch to update the script. I'll list steps in the todo: add the network wait loop, update the script, and apply changes.**Updating todo list and applying patch**\n\nI'm preparing to call manage_todo_list to mark tasks as completed, which requires a full list with statuses. The initial status is not-started. After that, I'll apply the patch to update the script. So, I'll call manage_todo_list twice: once with the not-started tasks and again to mark them as completed after the patch. The patch needs to modify the CONNECTIVITY CHECK section of the script to ensure it waits for network connectivity before running curl, possibly using ping or nc -z for checking connectivity.**Implementing network wait before curl**\n\nTo ensure proper connectivity before running the curl command, I think the best approach is to loop while trying to ping a reliable IP like 1.1.1.1. If the script is launched by launchd, the network may not be ready yet. I’ll implement a wait loop that will keep checking for internet access by using `ping` or `curl` with a timeout and maximum retries. This way, I can log attempts and proceed to curl the STREAM_URL only after confirming the network is available.**Updating script for network and curl**\n\nI believe it’s a better approach to keep trying curl on the STREAM_URL until it's available or I reach a total timeout. Since the user wants to wait for internet connection before running curl, I'll establish connectivity by pinging a reliable host like 1.1.1.1 first, setting WAIT_TIMEOUT to 60 seconds with a 5-second interval.\n\nThen, I’ll proceed with the curl command. I'll make minimal changes to the script, ensuring it follows the apply_patch format with the correct relative path, and provide context for the update. After applying the patch, I’ll mark the todo list as completed.**Planning patch and updates**\n\nI'll start by creating a short TODO plan for the changes needed. I need to send a preamble before the first manage_todo_list call. Then, before applying the patch, I'll inform the user that I'm adding a network-wait loop and updating the connectivity check.\n\nAfter applying the patch, I'll provide a progress update following the tool calls. The update will summarize what's next. I want to replace the connectivity section in the script with new code that includes the variables for waiting and checking connectivity via curl to a reliable host. I'll also ensure to format file links correctly.",
+                "encrypted": "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",
+                "tokens": 2112
+              }
+            },
+            {
+              "response": "Now I'll add a network-wait loop and update the connectivity check in the script.",
+              "toolCalls": [
+                {
+                  "id": "call_Tsd43UsICyOFOZNSi9BsY2MX__vscode-1767059739549",
+                  "name": "apply_patch",
+                  "arguments": "{\"input\":\"*** Begin Patch\\n*** Update File: /Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh\\n@@\\n ################################\\n # CONNECTIVITY CHECK\\n ################################\\n-\\n-echo \\\"$(date): Checking stream availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n-\\n-curl --silent --fail --max-time \\\"$CONNECT_TIMEOUT\\\" \\\"$STREAM_URL\\\" > /dev/null\\n-if [ $? -ne 0 ]; then\\n-    echo \\\"$(date): Stream unavailable. Skipping recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n-    exit 1\\n-fi\\n-\\n-echo \\\"$(date): Stream reachable. Starting recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+echo \\\"$(date): Checking network availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+# Wait for general internet connectivity before probing the stream.\\n+# Configure these values if you need a longer wait or shorter retry interval.\\n+NETWORK_WAIT_MAX=60       # total seconds to wait for internet\\n+NETWORK_WAIT_INTERVAL=5   # seconds between checks\\n+NETWORK_TEST_URL=\\\"https://www.apple.com\\\"\\n+\\n+elapsed=0\\n+echo \\\"$(date): Waiting for network connectivity (max ${NETWORK_WAIT_MAX}s)...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+while ! curl --silent --head --fail --max-time 5 \\\"$NETWORK_TEST_URL\\\" > /dev/null 2>&1; do\\n+    if [ \\\"$elapsed\\\" -ge \\\"$NETWORK_WAIT_MAX\\\" ]; then\\n+        echo \\\"$(date): Network unavailable after ${NETWORK_WAIT_MAX}s. Exiting.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+        exit 1\\n+    fi\\n+    sleep \\\"$NETWORK_WAIT_INTERVAL\\\"\\n+    elapsed=$((elapsed + NETWORK_WAIT_INTERVAL))\\n+done\\n+\\n+echo \\\"$(date): Network reachable. Checking stream availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+curl --silent --fail --max-time \\\"$CONNECT_TIMEOUT\\\" \\\"$STREAM_URL\\\" > /dev/null\\n+if [ $? -ne 0 ]; then\\n+    echo \\\"$(date): Stream unavailable. Skipping recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+    exit 1\\n+fi\\n+\\n+echo \\\"$(date): Stream reachable. Starting recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n*** End Patch\"}"
+                }
+              ],
+              "toolInputRetry": 0,
+              "id": "a8a562b2-c3cf-4263-a5ed-21db683b7126",
+              "statefulMarker": "U9+oxd/TZ1f1rY6cAqueZUztvjRb5HrJOWRg3SChD8p1NJhlGh5AdZ3KVdTXeRtzlppfWR0VD9wqDZDePARVx2sVuNjwd4o9tJzYHGYoXLMPhMfG1nvBOGJxW2FPwYuRjsqt9vdi958qiZCHrbh4z16rwmJHPB7+6TMCyG3YCTSsnBLUTju8lKA+AeSKpfbkbnMJyLUWDEC+215BMktpr3wJKZVVtVEYJUtPm2zIvhp9oap5zZhVZy9N9PjVknm2uqPpdJ0L6LUZuITlIGirORhN2Fih1/ufHR87Hft5WTuMbsqWhxKZDTamJQrod7q/LHlRSHLtLA9uu3jRYZB9Trhf7FO0LkxGajH7A2ZMnzeL6ouFD36cT/dYDjsEc49A1Pw1dG19XXS4l1JmyrCO+oOPmpPgQgQOYQ=="
+            },
+            {
+              "response": "",
+              "toolCalls": [
+                {
+                  "id": "call_TIEX6zKw3GTWESUrfwR3u9V0__vscode-1767059739550",
+                  "name": "apply_patch",
+                  "arguments": "{\"input\":\"*** Begin Patch\\n*** Update File: /Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh\\n@@\\n ################################\\n # CONNECTIVITY CHECK\\n ################################\\n-\\n-echo \\\"$(date): Checking stream availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n-\\n-curl --silent --fail --max-time \\\"$CONNECT_TIMEOUT\\\" \\\"$STREAM_URL\\\" > /dev/null\\n-if [ $? -ne 0 ]; then\\n-    echo \\\"$(date): Stream unavailable. Skipping recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n-    exit 1\\n-fi\\n-\\n-echo \\\"$(date): Stream reachable. Starting recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+echo \\\"$(date): Checking network availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+# Wait for general internet connectivity before probing the stream.\\n+# Configure these values if you need a longer wait or shorter retry interval.\\n+NETWORK_WAIT_MAX=60       # total seconds to wait for internet\\n+NETWORK_WAIT_INTERVAL=5   # seconds between checks\\n+NETWORK_TEST_URL=\\\"https://www.apple.com\\\"\\n+\\n+elapsed=0\\n+echo \\\"$(date): Waiting for network connectivity (max ${NETWORK_WAIT_MAX}s)...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+while ! curl --silent --head --fail --max-time 5 \\\"$NETWORK_TEST_URL\\\" > /dev/null 2>&1; do\\n+    if [ \\\"$elapsed\\\" -ge \\\"$NETWORK_WAIT_MAX\\\" ]; then\\n+        echo \\\"$(date): Network unavailable after ${NETWORK_WAIT_MAX}s. Exiting.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+        exit 1\\n+    fi\\n+    sleep \\\"$NETWORK_WAIT_INTERVAL\\\"\\n+    elapsed=$((elapsed + NETWORK_WAIT_INTERVAL))\\n+done\\n+\\n+echo \\\"$(date): Network reachable. Checking stream availability...\\\" >> \\\"$LOGDIR/record.log\\\"\\n+\\n+curl --silent --fail --max-time \\\"$CONNECT_TIMEOUT\\\" \\\"$STREAM_URL\\\" > /dev/null\\n+if [ $? -ne 0 ]; then\\n+    echo \\\"$(date): Stream unavailable. Skipping recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n+    exit 1\\n+fi\\n+\\n+echo \\\"$(date): Stream reachable. Starting recording.\\\" >> \\\"$LOGDIR/record.log\\\"\\n*** End Patch\",\"explanation\":\"Add a network-wait loop before performing the stream curl check\"}"
+                }
+              ],
+              "toolInputRetry": 1,
+              "id": "55c7114c-9e3f-4e73-a5cc-a3f6e95a4443",
+              "statefulMarker": "K4jd4bf7tUwXKNbCohe6l7CyLof5/2nBp/od1agI03aaALVi/3UMtUfl70iw2TwsCwOUuEdVh1auWsH3fVPdU1If8ru/jxuirUjL90YHs4C20kvykY2CpdpjRgzrL8DGGW31uOHakAClbv1FDsqGYo6qT9uNWcWPDnvNiupakT3/UjeAdHGOzQ4MdqpExt+UrjNRgSHAasQKruSTaYfGUegYsQcsjnddKOqhkWwbStzCT//v3tCcSKFtmnFDiQI1AeAIcTEintXB00TPtdoSy+G6txpxWbg34DyQ2H9Ndw6VmU8QIpzUH/ZU50x64EG9oUB7GZ+sbTExDhuU7hSzl156wkMHOTbjOsjeBlCsJ27fRcjlkJp1IUND0jDo4S8Thk38BeUIxVXfzblmEh5+0CqNzqTna4bImA=="
+            },
+            {
+              "response": "",
+              "toolCalls": [
+                {
+                  "id": "call_QOOrDDOy1ciEN4fQYMd7Ylhi__vscode-1767059739551",
+                  "name": "manage_todo_list",
+                  "arguments": "{\"todoList\":[{\"id\":1,\"title\":\"Add network-wait loop\",\"description\":\"Modify `record_stream.sh` to wait for general internet connectivity before attempting `curl` to the stream, with configurable timeout and interval.\",\"status\":\"completed\"},{\"id\":2,\"title\":\"Update script and tests\",\"description\":\"Apply changes to `record_stream.sh`, run a quick static check, and verify logs are written.\",\"status\":\"in-progress\"}]}"
+                }
+              ],
+              "toolInputRetry": 0,
+              "id": "bfd73f24-9e96-49a9-9847-dddac8098ba0",
+              "statefulMarker": "4H2k7c7lCVDo6yHLnBNtMBnrERn2VdVNwaL8BBjJcDEoS0aBumw9P9OBAUi7d8eseqYqUwIMhXEIM/GUTmYj1gtpEgmnW55Ecwd5BYlOIti/3gTA6JViDL0tjFnkSlKTyxhzdXbxlHiW2KKODZhES51cTgfshLSYw8q0OFsKkaI64xziDU18NUAXi4QXcF5nh3HPmSi84vKefZ51lbKvutmTzlOGWyU4FCfUJnpJeTI9K4djT889qgQltnrXl1I4I1PmUPT2Yz4Ep0cCBqTjvCL5Mk81KvkUrfRpbZ7O+rhqxZ5vj8rFLOTTxumxG5bnAzrcnphq7+zuG+AJUfnzSj4uF0ZU9vdA0nmvdKcqfUP08cfitJxtS84E9j8oCpD017c/IiqXQpcC2P/CcrYFLJbYUhavOMao5A=="
+            },
+            {
+              "response": "Progress update: I added a network-wait loop to the connectivity check in the script.\n\nWhat I changed\n- **File:** [record_stream.sh](record_audio_stream/record_stream.sh)\n- **Change:** Added a loop that waits for general internet connectivity (by curling https://www.apple.com) up to a configurable timeout before attempting the stream `curl` check.\n\nKey behavior\n- New variables: `NETWORK_WAIT_MAX` (seconds), `NETWORK_WAIT_INTERVAL` (seconds), `NETWORK_TEST_URL`.\n- The script waits until it can reach `NETWORK_TEST_URL` (5s curl timeout per check) or exits after the max wait, then performs the original `curl` probe of the HLS stream.\n\nHow to adjust or test\n- Edit `NETWORK_WAIT_MAX` and `NETWORK_WAIT_INTERVAL` near the top of the connectivity section to change wait behavior.\n- Run the script manually to test:\n```bash\ncd record_audio_stream\n./record_stream.sh\n```\n- Logs: check $HOME/recordings/logs/record.log and ffmpeg.log for progress and errors.\n\nNext steps\n- If you want, I can:\n  - Increase robustness (exponential backoff, DNS-only check, or use a different test URL).\n  - Add a launchd-compatible plist that sets NetworkState conditions.\n  - Run the script under your launchd setup to validate behavior.\n\nWould you like me to implement any of those next?",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "75107167-a853-43a3-84c1-c4d79e199785",
+              "statefulMarker": "5vSr4Vm4Rs9OD4gnkPmrphNp3cK5AAI3MAVU5BwQ/57lVErd7XWYQsbvNgmKdMmbmpaXFjWLBC1sgo2eLxwbR+cpnT1/a2o2p0GmQdaBKi0WvASZH0e3GjlvWJ81ZiQqNSDPrIMe4LOvRErQbuimqjXiIrWAIJsUFiASvKpIdPqREoxaj2J1p2UuaUzyPV4JCOxx3CpYY5HUoD5tvHfhvXLlVXWJIGrQkBKZO4DmBy5yOjMoJplY0z9R05sw1AJXAliHhppQ/+NsztRPaBINIlPEn9eAIplY7WBbaCpFayY5T6zfoUujrvB4EBa9jxBD1fb+BK4UIueOTNjv8qVZrBA7909F/G38jC9wV1E+FFYCLYeG2e7DbNZAxoezykIYJcfby5abY0YgHeDLfNOyfnyMmWoS3UnjYw=="
+            }
+          ],
+          "toolCallResults": {
+            "call_ECeIkD6B9dMoLF07jqNZVZeO__vscode-1767059739548": {
+              "$mid": 20,
+              "content": [
+                {
+                  "$mid": 21,
+                  "value": "Successfully wrote todo list\n\nWarning: Small todo list (<3 items). This task might not need a todo list."
+                }
+              ]
+            },
+            "call_Tsd43UsICyOFOZNSi9BsY2MX__vscode-1767059739549": {
+              "$mid": 20,
+              "content": [
+                {
+                  "$mid": 21,
+                  "value": "ERROR: Your input to the tool was invalid (must have required property 'explanation')\nPlease check your input and try again."
+                }
+              ]
+            },
+            "call_TIEX6zKw3GTWESUrfwR3u9V0__vscode-1767059739550": {
+              "$mid": 20,
+              "content": [
+                {
+                  "$mid": 23,
+                  "value": {
+                    "node": {
+                      "type": 1,
+                      "ctor": 2,
+                      "ctorName": "P_",
+                      "children": [
+                        {
+                          "type": 2,
+                          "priority": 9007199254740991,
+                          "text": "The following files were successfully edited:",
+                          "lineBreakBefore": false
+                        },
+                        {
+                          "type": 2,
+                          "priority": 9007199254740991,
+                          "text": "\n",
+                          "lineBreakBefore": false
+                        },
+                        {
+                          "type": 2,
+                          "priority": 9007199254740991,
+                          "text": "/Users/abusyahmie/code/Bash_Scripting/record_audio_stream/record_stream.sh",
+                          "lineBreakBefore": false
+                        },
+                        {
+                          "type": 2,
+                          "priority": 9007199254740991,
+                          "text": "\n",
+                          "lineBreakBefore": false
+                        }
+                      ],
+                      "props": {},
+                      "references": []
+                    }
+                  }
+                }
+              ]
+            },
+            "call_QOOrDDOy1ciEN4fQYMd7Ylhi__vscode-1767059739551": {
+              "$mid": 20,
+              "content": [
+                {
+                  "$mid": 21,
+                  "value": "Successfully wrote todo list\n\nWarning: Small todo list (<3 items). This task might not need a todo list."
+                }
+              ]
+            }
+          },
+          "modelMessageId": "09803945-7843-4b60-b7f5-38f6327736b7",
+          "responseId": "529a343f-a55b-4a5b-a6eb-73904501d5f6",
+          "sessionId": "6fc9ae52-7c2b-48e3-9725-e241f89fdd78",
+          "agentId": "github.copilot.editsAgent"
+        },
+        "details": "GPT-5 mini • 1x"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-61449384-98e5-4cb3-9ade-dd39540638bd"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1767060276045
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0
+    }
+  ]
+}
