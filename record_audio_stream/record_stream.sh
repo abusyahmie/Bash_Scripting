@@ -35,12 +35,31 @@ mkdir -p "$LOGDIR"
 # CONNECTIVITY CHECK
 ################################
 
-echo "$(date): Checking stream availability..." >> "$LOGDIR/record.log"
+echo "$(date): Checking network availability..." >> "$LOGDIR/record.log"
+
+# Wait for general internet connectivity before probing the stream.
+# Configure these values if you need a longer wait or shorter retry interval.
+NETWORK_WAIT_MAX=60       # total seconds to wait for internet
+NETWORK_WAIT_INTERVAL=5   # seconds between checks
+NETWORK_TEST_URL="https://www.apple.com"
+
+elapsed=0
+echo "$(date): Waiting for network connectivity (max ${NETWORK_WAIT_MAX}s)..." >> "$LOGDIR/record.log"
+while ! curl --silent --head --fail --max-time 5 "$NETWORK_TEST_URL" > /dev/null 2>&1; do
+  if [ "$elapsed" -ge "$NETWORK_WAIT_MAX" ]; then
+    echo "$(date): Network unavailable after ${NETWORK_WAIT_MAX}s. Exiting." >> "$LOGDIR/record.log"
+    exit 1
+  fi
+  sleep "$NETWORK_WAIT_INTERVAL"
+  elapsed=$((elapsed + NETWORK_WAIT_INTERVAL))
+done
+
+echo "$(date): Network reachable. Checking stream availability..." >> "$LOGDIR/record.log"
 
 curl --silent --fail --max-time "$CONNECT_TIMEOUT" "$STREAM_URL" > /dev/null
 if [ $? -ne 0 ]; then
-    echo "$(date): Stream unavailable. Skipping recording." >> "$LOGDIR/record.log"
-    exit 1
+  echo "$(date): Stream unavailable. Skipping recording." >> "$LOGDIR/record.log"
+  exit 1
 fi
 
 echo "$(date): Stream reachable. Starting recording." >> "$LOGDIR/record.log"
